@@ -1,0 +1,14 @@
+<div class="box-wrap">
+	<!--图片-->
+	<img src="http://img.zcool.cn/community/01a20559bbeb2da801212fb776ba68.jpg@260w_195h_1c_1e_1o_100sh.jpg" alt="">
+	<!--信息-->
+	<div class="card">
+		<p>BAPTISM/DIGITAL TRANCE</p>
+		<span>类别-舞台美术</span>
+	</div>
+	<!--作者-->
+	<div class="card-item">
+		<img src="http://img.zcool.cn/community/006c9e59bd9cb2a8012075345dfc7c.jpg@80w_80h_1c_1e_1o_100sh.jpg" alt="">
+		<span>Friendred</span>
+	</div>
+</div>

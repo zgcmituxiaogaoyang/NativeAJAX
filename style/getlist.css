@@ -1,0 +1,82 @@
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+body{
+	background: #ddd;
+}
+.btn{
+	padding: 20px;
+	text-align: center;
+	background: rgba(0,0,0,.8);
+	color: #fff;
+	font-size: 30px;
+	border-radius: 10px;
+	box-shadow: 0 0 5px #000;
+	margin-bottom: 30px;
+	transition: all .3s;
+}
+.btn:hover{
+	background: rgba(0,0,0,.3);
+	color: rgb(0,9,9);
+}
+.container{
+	max-width: 1150px;
+	margin: 0 auto;
+}
+.box-wrap{
+	width: 210px;
+	margin: 0 20px 20px 0;
+	float: left;
+	box-shadow: 0 0 8px #999;
+	border-radius: 5px;
+	overflow: hidden;
+	float: left;
+	background: #fff;
+}
+.box-wrap img{
+	width: 100%;
+}
+.card{
+	padding: 5px 20px;
+}
+.card p{
+	margin-bottom: 1px;
+    position: relative;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	color:#333;
+}
+.card span{
+	font-size: 12px;
+	color: #b6b6b6;
+}
+.card:after{
+	display: block;
+	content: " ";
+	height: 1px;
+	background: rgba(0,0,0,.3);
+	width: 210px;
+	margin-left: -20px;
+	margin-top: 20px;
+}
+.card-item{
+	width: 210px;
+	padding: 10px 20px;
+}
+.card-item img{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-bottom: -5px;
+}
+.card-item span{
+	line-height: 20px;
+	font-size: 14px;
+	color: #999;
+}

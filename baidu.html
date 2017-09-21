@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/baidu.css">
+</head>
+<body>
+	<div id="search">
+		<input type="text">
+		<button>嗖嗖嗖一下</button>
+		<ul class="search-res">
+		</ul>
+	</div>
+</body>
+<script>
+	window.onload = function(){
+		var oButton = $("#search").children[0];
+		var oText = $("#search").children[0];
+		var timerOut;
+		oText.onkeyup = function(){
+			//获取数据
+			//延时获取; >> 防止事件多次触发请求冗余过多;
+			clearTimeout(timerOut);	
+			timerOut = setTimeout(function(){
+				getRes(oText.value);//获取数据;
+			},500)
+		}
+	}
+	function getRes(val){
+		var script = document.createElement("script");
+		script.src = "https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd="+val+"&json=1&p=3&sid=22084_1436_13548_21120_22036_22073&req=2&csor=0&cb=callback";
+		document.getElementsByTagName("head")[0].appendChild(script);
+	}
+	function callback(res){//回调函数;
+		console.log(res.s);//回调数组 中都是关键词字符串;
+		var str = "";
+		for(var i = 0 ;i < res.s.length ; i++){
+			str += "<li>"+res.s[i]+"</li>";
+		}
+		$(".search-res").innerHTML = str;
+	}
+	function $(select){
+		return document.querySelector(select);
+	}
+
+</script>	
+</html>

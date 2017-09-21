@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/position.css">
+</head>
+<body>
+	
+	<div class="container" id="container">
+			
+		<button id="btn">查找你的位置</button>
+		
+	</div>
+
+</body>
+
+<script src="libs/ajax.js"></script>
+<script>
+	var oBtn = document.getElementById("btn");
+	var oContainer = document.getElementById("container");
+	oBtn.onclick = function(){
+		//插入gif图;
+		oContainer.innerHTML = "<img src='images/hack.gif'>"
+		//跨域获取数据;
+		jsonp("http://freegeoip.net/json/","callback",function(res){
+			setTimeout(function(){
+
+				oContainer.innerHTML = `
+										<h3>你所在的位置:</h3>
+										<p>经度:${res.latitude}</p>
+										<p>纬度:${res.longitude}</p>
+										<p>城市:${res.region_name}</p>
+										`
+			}, 1000);
+		})
+	}
+
+</script>
+</html>
